@@ -39,7 +39,7 @@ if platform.system() == 'Windows':
 else:
     monthly_data.index = monthly_data.index.strftime('%-m/%-d/%Y')
  
-output_path= r"...\CAMELS_Afr_Climate_Monthly_L1_p_mswep.csv"
+output_path= r"...\CAMELS_Afr_Climate_Monthly_L1_p_mean_mswep.csv"
 # Save to CSV
 monthly_data.to_csv(output_path)
  
