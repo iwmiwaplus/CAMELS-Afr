@@ -26,7 +26,7 @@ df['Date'] = pd.to_datetime(df['Date'])
 # Set Date as index
 df.set_index('Date', inplace=True)
  
-# Sum daily values for each month
+# Sum daily values for each year
 annual_percip = df.resample('YS').sum()
  
 # Display the result
