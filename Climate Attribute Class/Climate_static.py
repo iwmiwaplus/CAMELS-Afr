@@ -93,7 +93,7 @@ for basin in basin_cols:
             high_prec_timing = top_seasons[0]
         else:
             high_prec_timing = ",".join(top_seasons)
-            print(f"⚠️ Tie in HIGH precipitation timing for basin: {basin} → {top_seasons}")
+            print(f" Tie in HIGH precipitation timing for basin: {basin} → {top_seasons}")
     
     # LOW PRECIP
     low_days = p <= 1
@@ -122,7 +122,7 @@ for basin in basin_cols:
             low_prec_timing = top_seasons_low[0]
         else:
             low_prec_timing = ",".join(top_seasons_low)
-            print(f"⚠️ Tie in LOW precipitation timing for basin: {basin} → {top_seasons_low}")
+            print(f"Tie in LOW precipitation timing for basin: {basin} → {top_seasons_low}")
     
     # ANNUAL PRECIP
     annual_prec = basin_df.groupby("Year")[basin].sum().mean()
@@ -153,5 +153,5 @@ results_df = pd.DataFrame(results)
 output_path = ".../CAMELS_Afr_Climate_Static_L2_mswep.csv"
 results_df.to_csv(output_path, index=False)
 
-print("✅ Climate indices successfully computed and saved!")
+print("Climate indices successfully computed and saved!")
 print(results_df.head())
