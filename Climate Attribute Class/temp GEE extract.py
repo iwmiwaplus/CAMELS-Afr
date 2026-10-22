@@ -71,9 +71,9 @@ for year in range(1980, 2026):
     # 5. Create an Export Task for the current year
     task = ee.batch.Export.table.toDrive(
         collection=finalCollection,
-        description=f'Africa_Sinai_L3_Temp_Daily_{year}',
-        folder='Africa_Sinai_L3_Temp_Data_1980_2025',
-        fileNamePrefix=f'Africa_Sinai_L3_Temp_{year}',
+        description=f'Africa_L1_Temp_Daily_{year}',
+        folder='Africa_L1_Temp_Data_1980_2025',
+        fileNamePrefix=f'Africa_L1_Temp_{year}',
         fileFormat='CSV',
         selectors=['Basin_ID', 'Date', 'temp_mean', 'temp_min', 'temp_max']
     )
