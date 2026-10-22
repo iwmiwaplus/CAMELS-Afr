@@ -44,7 +44,7 @@ BASIN_PATH = os.path.join(
     "CAMELS_Afr_L1_Basin_Boundaries.shp"
 )
  
-# Current raster
+# Current raster (Change this to the required raster file name)
 TIF_NAME = "bulk_density.tif"
  
 TIF_FILE = os.path.join(  
